@@ -1,7 +1,14 @@
 #!/usr/bin/env php
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+$Path1 = __DIR__ . '/../../../autoload.php';
+$Path2 = __DIR__ . '/../vendor/autoload.php';
 
-use function Mih_gif\hangman\Controller\startGame;
+if (file_exists($Path1)) {
+    include_once $Path1;
+} else {
+    include_once $Path2;
+}
 
-startGame();
+use Mih_gif\hangman\Controller;
+
+Controller\run($argv);
