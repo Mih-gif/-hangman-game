@@ -49,7 +49,7 @@ const HANGMAN_PICS = [
 
 function showHelp()
 {
-    \cli\line("Hangman");
+    \cli\line("Hangman Game");
     \cli\line("============");
     \cli\line("Usage:");
     \cli\line("  hangman [options]");
